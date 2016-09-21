@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
 		<style type="text/css">
 			body{
@@ -21,6 +22,11 @@
 			}
 			#link_button_div{
 				margin-top:5%;
+			}
+			@media only screen and (max-width: 500px) {
+				#connect_btn{
+					width:80%;
+				}
 			}
 		</style>
 	</head>
