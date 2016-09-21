@@ -1,5 +1,5 @@
 {
-    "name": "rahul/tweetr1",
+    "name": "rahul/tweeter-api-challenge",
     "description": "twitter api example",
     "require": {
         "abraham/twitteroauth": "^0.6.4",
