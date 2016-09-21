@@ -173,6 +173,7 @@
 }
 #followers_dropdown{
 	border:1px solid lightgrey;
+	background:white;
 	width:100%;
 	text-align:left;
 	position:absolute;
