@@ -4,7 +4,7 @@ session_start();
 
 require 'login_check.php';
 
-require 'vendor/abraham/twitteroauth/autoload.php';
+require 'vendor/autoload.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 $consumer_key = 'MRH0aS7lMOYkgHgcGg1Myc1qR';
@@ -118,7 +118,7 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
 						}
 						
 					}else{
-						header('Location: index.php');
+						header('Location: /index.php');
 					}
 					
 				}
@@ -130,7 +130,7 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
 		}
 	}else die("Database connection failed");
 	mysqli_close($conn);
-}else header('Location: index.php');
+}else header('Location: /index.php');
 
 function verify_vars(){
 	foreach(func_get_args() as $arg){

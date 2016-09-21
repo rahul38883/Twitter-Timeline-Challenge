@@ -30,7 +30,7 @@ if(verify_vars($_POST['value'])){
 		}
 		
 	}else{
-		$response = redirect_data("index.php");
+		$response = redirect_data("/index.php");
 	}
 	
 }else{

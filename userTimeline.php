@@ -1,6 +1,6 @@
 <?php
 
-require 'initial_operation.php';
+require 'src/initial_operation.php';
 
 ?>
 
@@ -43,7 +43,7 @@ require 'initial_operation.php';
 							</div>
 							<ul class="dropdown-menu">
 								<li><a href="http://www.twitter.com"><span id="user_name"></span><br><span id="user_uname"></span></a></li>
-								<li><a href="logout.php">Logout</a></li> 
+								<li><a href="src/logout.php">Logout</a></li> 
 							</ul>
 						</li>
 					</ul>
@@ -146,7 +146,7 @@ require 'initial_operation.php';
 					
 					<a id="donwloadLink" class="downloadElements" href="" download=""></a>
 					<table id="donwloadTable" class="downloadElements"></table>
-					<form id="pdf_form" name="pdf_form" action="create_pdf.php" method="POST" target="_blank">
+					<form id="pdf_form" name="pdf_form" action="src/create_pdf.php" method="POST" target="_blank">
 						<input type="hidden" id="obj_var" name="obj_var" value="">
 						<input type="hidden" id="pdf_filename" name="pdf_filename" value="">
 					</form>

@@ -3,7 +3,7 @@ var window_search_close = 1;
 
 $(document).ready(function(){
 	
-	$.post('getData.php', {type:1}, function(response){
+	$.post('src/getData.php', {type:1}, function(response){
 		response = format_text(response);
 		response = JSON.parse(response);
 			
@@ -20,7 +20,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$.post('getData.php', {type:2}, function(response){
+	$.post('src/getData.php', {type:2}, function(response){
 		response = format_text(response);
 		response = JSON.parse(response);
 		
@@ -33,7 +33,7 @@ $(document).ready(function(){
 		
 	});
 	
-	$.post('getData.php', {type:3}, function(response){
+	$.post('src/getData.php', {type:3}, function(response){
 		response = format_text(response);
 		response = JSON.parse(response);
 		
@@ -125,7 +125,7 @@ $(document).ready(function(){
 		}
 		
 		if(input.length > 0){
-			xhr_search = $.post('fetch_user.php', {value:input}, function(response){
+			xhr_search = $.post('src/fetch_user.php', {value:input}, function(response){
 				response = JSON.parse(response);
 				if(response.status == 'error'){
 					console.error(response.data);
@@ -158,7 +158,7 @@ $(document).ready(function(){
 	
 	$('#change_cache_duration').change(function(){
 		var value = $(this).val();
-		$.post('change_cache_duration.php', {cache_duration:value}, function(response){
+		$.post('src/change_cache_duration.php', {cache_duration:value}, function(response){
 			//
 		});
 	});
@@ -170,7 +170,7 @@ $(document).ready(function(){
 	
 	$(document.body).on('click', '#download_tweets_btn', function(){
 		var value = $('#download_format').find(':selected').attr('value');
-		$.post('getData.php', {type:4, screen_name:this_user, count:10}, function(response){
+		$.post('src/getData.php', {type:4, screen_name:this_user, count:10}, function(response){
 			response = JSON.parse(response);
 			
 			if(response.status=='error'){
@@ -309,6 +309,7 @@ $(document).ready(function(){
 		}else if(type==2 || type==4){
 			
 			var temp_html;
+			//temp_html += '<table>';
 			var keys = Object.keys(obj[0]);
 			
 			temp_html += '<tr>';
@@ -353,8 +354,11 @@ $(document).ready(function(){
 				
 			});
 			
+			//temp_html += '</table>';
+			
 			if(type==2){
 				
+				//temp_html = temp_html.replace(/ /g, '%20');
 				$('#donwloadTable').html(temp_html);
 				$('#donwloadTable').tableExport({
 					type:'excel',
@@ -397,7 +401,7 @@ $(document).ready(function(){
 			
 			no_click = 1;
 			
-			$.post('google_auth.php', {tweet_data:JSON.stringify(obj), filename:filename, worksheetname:'TweetsRecord' }, function(response){
+			$.post('src/google_auth.php', {tweet_data:JSON.stringify(obj), filename:filename, worksheetname:'TweetsRecord' }, function(response){
 				response = JSON.parse(response);
 				if(response.status == "success"){
 					window.open(response.data.auth_url, '_blank');
@@ -569,7 +573,7 @@ function display_follower_tweets(screen_name){
 	if(xhr_follower && xhr_follower.readyState != 4){
 		xhr_follower.abort();
 	}
-	xhr_follower = $.post('getData.php', {type:4, screen_name:screen_name, count:10}, function(response){
+	xhr_follower = $.post('src/getData.php', {type:4, screen_name:screen_name, count:10}, function(response){
 		response = format_text(response);
 		response = JSON.parse(response);
 		if(response.status=='error'){

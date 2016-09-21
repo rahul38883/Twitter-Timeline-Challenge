@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div id="link_button_div">
-			<a href="twitterLogin.php">
+			<a href="src/twitterLogin.php">
 				<button class="btn btn-primary">Connect to Twitter</button>
 			</a>
 		</div>

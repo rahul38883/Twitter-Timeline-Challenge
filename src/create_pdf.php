@@ -1,6 +1,6 @@
 <?php
 
-require 'lib/fpdf/fpdf.php';
+require '../lib/fpdf/fpdf.php';
 require 'login_check.php';
 
 class PDF extends FPDF{
@@ -72,7 +72,7 @@ if(verify_vars($_POST['pdf_filename'], $_POST['obj_var'])){
 	$obj = json_decode($_POST['obj_var']);
 	$filename = $_POST['pdf_filename'];
 }else{
-	header('Location: index.php');
+	header('Location: /index.php');
 }
 
 $pdf = new PDF('L','mm','A4');

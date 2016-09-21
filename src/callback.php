@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'vendor/abraham/twitteroauth/autoload.php';
+require '../vendor/autoload.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 $consumer_key = 'MRH0aS7lMOYkgHgcGg1Myc1qR';
@@ -26,5 +26,5 @@ $_SESSION['user'] = $user;
 $_SESSION['oauth_token'] = $access_token['oauth_token'];
 $_SESSION['oauth_token_secret'] = $access_token['oauth_token_secret'];
 $_SESSION['logged_in'] = 1;
-header('Location: userTimeline.php');
+header('Location: /userTimeline.php');
 ?>

@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<script>
 		function startSetup(filename){
 			var seconds = 10;
@@ -31,13 +31,13 @@
 <?php
 session_start();
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use Google\Spreadsheet\DefaultServiceRequest;
 use Google\Spreadsheet\ServiceRequestFactory;
 
 $client = new Google_Client();
-$client->setAuthConfig('files/client_secret_964042762601-j7ui5d9d5ho9mtrtrs6e2a80d9jrb22j.apps.googleusercontent.com.json');
+$client->setAuthConfig('../files/client_secret_964042762601-j7ui5d9d5ho9mtrtrs6e2a80d9jrb22j.apps.googleusercontent.com.json');
 $client->setScopes(array("https://spreadsheets.google.com/feeds",
 	"https://www.googleapis.com/auth/drive",
 	"https://www.googleapis.com/auth/drive.file",
@@ -55,11 +55,11 @@ if(verify_vars($_SESSION['tweet_data'], $_SESSION['filename'], $_SESSION['worksh
 	$filename = $_SESSION['filename'];
 	$worksheetname = $_SESSION['worksheetname'];
 }else{
-	header('Location: userTimeline.php');
+	header('Location: /userTimeline.php');
 }
 
 if(count($data) == 0){
-	header('Location: userTimeline.php');
+	header('Location: /userTimeline.php');
 }else{
 	
 	$driveService = new Google_Service_Drive($client);

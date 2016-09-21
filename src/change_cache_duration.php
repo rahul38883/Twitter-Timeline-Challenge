@@ -22,7 +22,7 @@ if(verify_vars($_SESSION['user'], $_POST['cache_duration'])){
 		}
 	}
 }else{
-	$response = redirect_data("index.php");
+	$response = redirect_data("/index.php");
 }
 
 echo json_encode($response);

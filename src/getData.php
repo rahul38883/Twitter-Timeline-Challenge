@@ -3,7 +3,7 @@ session_start();
 
 require 'login_check.php';
 
-require 'vendor/abraham/twitteroauth/autoload.php';
+require '../vendor/autoload.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 $consumer_key = 'MRH0aS7lMOYkgHgcGg1Myc1qR';
@@ -45,7 +45,7 @@ if($type==1){
 			}
 		}else{
 			$status = "redirect";
-			$data = array("url"=>"index.php");
+			$data = array("url"=>"/index.php");
 		}
 	}
 }else{
@@ -86,7 +86,7 @@ if($type==1){
 				}
 			}else{
 				$status = "redirect";
-				$data = array("url"=>"userTimeline.php");
+				$data = array("url"=>"/userTimeline.php");
 			}
 		}else{
 			$status = "error";
@@ -94,7 +94,7 @@ if($type==1){
 		}
 	}else{
 		$status = "redirect";
-		$data = array("url"=>"index.php");
+		$data = array("url"=>"/index.php");
 	}
 }
 $response = array("status"=>$status, "data"=>$data);
