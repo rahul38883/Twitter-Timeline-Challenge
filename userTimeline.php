@@ -13,7 +13,6 @@ require 'initial_operation.php';
 		<script type="text/javascript" src="lib/tableExport/tableExport_modified.js"></script>
 		<script type="text/javascript" src="lib/tableExport/jquery.base64_modified.js"></script>
 		<script type="text/javascript" src="lib/tableExport/jspdf/libs/sprintf.js"></script>
-		<script type="text/javascript" src="lib/jspdf.js"></script>
 		<script type="text/javascript" src="lib/tableExport/jspdf/libs/base64.js"></script>
 		<script type="text/javascript" src="js/userTimeline.js"></script>
 		<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
@@ -146,7 +145,11 @@ require 'initial_operation.php';
 					</div>
 					
 					<a id="donwloadLink" class="downloadElements" href="" download=""></a>
-					<table id="donwloadTable" class="downloadElements"></a>
+					<table id="donwloadTable" class="downloadElements"></table>
+					<form id="pdf_form" name="pdf_form" action="create_pdf.php" method="POST" target="_blank">
+						<input type="hidden" id="obj_var" name="obj_var" value="">
+						<input type="hidden" id="pdf_filename" name="pdf_filename" value="">
+					</form>
 					
 				</div>
 				

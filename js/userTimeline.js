@@ -309,7 +309,6 @@ $(document).ready(function(){
 		}else if(type==2 || type==4){
 			
 			var temp_html;
-			//temp_html += '<table>';
 			var keys = Object.keys(obj[0]);
 			
 			temp_html += '<tr>';
@@ -354,11 +353,8 @@ $(document).ready(function(){
 				
 			});
 			
-			//temp_html += '</table>';
-			
 			if(type==2){
 				
-				//temp_html = temp_html.replace(/ /g, '%20');
 				$('#donwloadTable').html(temp_html);
 				$('#donwloadTable').tableExport({
 					type:'excel',
@@ -369,20 +365,28 @@ $(document).ready(function(){
 				
 			}else if(type==4){
 				
-				
-				var doc = new jsPDF();
-				var elementHandler = {
-					'#what': function (element, renderer) {
-						return true;
-					}
+				var newObj = {
+					keys : Object.keys(obj[0]),
+					values : []
 				};
-				var source = '<table>'+temp_html+'</table>';
-				doc.fromHTML(source, 10, 10, {
-					'width': 300,
-					'elementHandlers': elementHandler
+				obj.forEach(function(item, index){
+					var arr = [];
+					for(var key in item){
+						if(key == 'media'){
+							var arrr = [];
+							item[key].forEach(function(item){
+								arrr[arrr.length] = item["source"]?item["source"]:item["url"];
+							});
+							arr[arr.length] = arrr;
+						}else{
+							arr[arr.length] = item[key];
+						}
+					}
+					newObj.values[index] = arr;
 				});
-				doc.save(filename+'.pdf');
-				
+				$('#obj_var').val(JSON.stringify(newObj));
+				$('#pdf_filename').val(filename);
+				$('#pdf_form').submit();
 				no_click = 1;
 				
 			}
