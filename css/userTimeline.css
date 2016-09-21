@@ -65,9 +65,10 @@
 }
 
 .tweet_box>div>div>div{
-	border:1px solid black;
+	border:1px solid lightgrey;
 	width:70%;
 	margin:0% 15%;
+	padding:1%;
 }
 .tweet_box>div>div>div>div{
 	width:100%;
@@ -90,13 +91,14 @@
 .tweet_main>div{
 	display:inline-block;
 	vertical-align:top;
+	margin:0.5%;
 }
 .profile_pic_div{
 	width:10%;
 	min-width:48px;
 }
 .tweet_main_div{
-	width:90%;
+	width:85%;
 }
 .tweet_main_div>div{
 	padding-bottom:1%;
@@ -283,6 +285,16 @@
 	}
 	#carousel_data_wrapper{
 		height:70vh;
+	}
+	.tweet_main>div{
+		margin:0% 1.5%;
+	}
+	.tweet_main_div{
+		width:70%;
+	}
+	.tweet_box>div>div>div{
+		width:96%;
+		margin:0% 2%;
 	}
 	#followers_list>div{
 		width:98%;
