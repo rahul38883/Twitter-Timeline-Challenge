@@ -169,12 +169,14 @@
 #follower_input_div{
 	margin-left:5%;
 	width:25%;
+	position:relative;
 }
 #followers_dropdown{
 	border:1px solid lightgrey;
-	float:left;
 	width:100%;
 	text-align:left;
+	position:absolute;
+	display:none;
 }
 #followers_dropdown>a:hover{
 	text-decoration:none;
