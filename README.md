@@ -2,7 +2,7 @@
 
 Twitter timeline challenge assignment for rtCamp Solutions PVT LTD.
 
-**Features**
+### Features
   - Fetch tweets from Home Timeline
   - Fetch followers
   - Fetch tweets from User Timeline of follower
