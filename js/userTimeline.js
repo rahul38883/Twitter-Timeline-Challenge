@@ -182,7 +182,7 @@ $(document).ready(function(){
 				var obj = [];
 				
 				if(response.data.length == 0){
-					console.error('no tweets found');
+					error_show('no tweets found');
 					return;
 				}
 				
@@ -406,7 +406,7 @@ $(document).ready(function(){
 				if(response.status == "success"){
 					window.open(response.data.auth_url, '_blank');
 				}else{
-					console.error("something went wrong with google auth!!");
+					error_show("something went wrong with google auth!!");
 				}
 			});
 			
