@@ -78,12 +78,13 @@
 }
 .retweet_indicator>div{
 	display:inline-block;
+	margin:0% 0.5%;
 }
 .retweet_indicator_dummy{
 	width:10%;
 }
 .retweet_indicator_text{
-	width:90%;
+	width:80%;
 }
 .tweet_main{
 	padding:1%;
@@ -91,7 +92,7 @@
 .tweet_main>div{
 	display:inline-block;
 	vertical-align:top;
-	margin:0.5%;
+	margin:0% 0.5%;
 }
 .profile_pic_div{
 	width:10%;
