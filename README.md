@@ -37,4 +37,8 @@ Following libraries are used in this project
 * [JQuery](https://jquery.com) - Most popular JavaScript library
 * [TableExport JQuery Plugin](https://github.com/kayalshri/tableExport.jquery.plugin) - This library exports html table data to downloadable file
 * [FileSaver.js](https://github.com/eligrey/FileSaver.js/) - This library for saving files on client machine
+<<<<<<< HEAD
 * [Bootstrap](http://getbootstrap.com/) - Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development
+=======
+* [Bootstrap](http://getbootstrap.com/) - Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development
+>>>>>>> 17b7988cd55e5986fcc90fa2d7c293bdd8fe94ba
