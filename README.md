@@ -1,4 +1,4 @@
-# Twitter-Timeline-Challenge
+# Twitter Timeline Challenge
 
 Twitter timeline challenge assignment for rtCamp Solutions PVT LTD.
 
