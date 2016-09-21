@@ -8,7 +8,7 @@ $(document).ready(function(){
 		response = JSON.parse(response);
 			
 		if(response.status=='error'){
-			console.error(response.data);
+			error_show(response.data);
 		}else if(response.status=='redirect'){
 			window.location.href = response.data.url;
 		}else{
@@ -26,7 +26,7 @@ $(document).ready(function(){
 		
 		a = response;
 		if(response.status=='error'){
-			console.error(response.data);
+			error_show(response.data);
 		}else{
 			display_tweets(response.data);
 		}
@@ -38,7 +38,7 @@ $(document).ready(function(){
 		response = JSON.parse(response);
 		
 		if(response.status=='error'){
-			console.error(response.data);
+			error_show(response.data);
 		}else{
 			
 			var data = response.data;
@@ -128,7 +128,7 @@ $(document).ready(function(){
 			xhr_search = $.post('src/fetch_user.php', {value:input}, function(response){
 				response = JSON.parse(response);
 				if(response.status == 'error'){
-					console.error(response.data);
+					error_show(response.data);
 				}else if(response.status == 'redirect'){
 					window.location.href = response.data.url;
 				}else{
@@ -174,7 +174,7 @@ $(document).ready(function(){
 			response = JSON.parse(response);
 			
 			if(response.status=='error'){
-				console.error(response.data);
+				error_show(response.data);
 			}else if(response.status=='redirect'){
 				window.location.href = response.data.url;
 			}else{
@@ -577,7 +577,7 @@ function display_follower_tweets(screen_name){
 		response = format_text(response);
 		response = JSON.parse(response);
 		if(response.status=='error'){
-			console.error(response.data);
+			error_show(response.data);
 		}else if(response.status=='redirect'){
 			window.location.href = response.data.url;
 		}else{
@@ -672,4 +672,9 @@ function createFollowerHTML(obj){
 			'</div>';
 			
 	return s;
+}
+
+function error_show(data){
+	$('#modal_error_text').text(data);
+	$('#error_modal').modal('show');
 }
