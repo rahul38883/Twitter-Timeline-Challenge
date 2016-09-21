@@ -34,6 +34,7 @@ Following libraries are used in this project
 * [TwitterOAuth](https://github.com/abraham/twitteroauth) - The most popular PHP library for Twitter's OAuth REST API
 * [Google APIs Client Library](https://developers.google.com/api-client-library/php/) - The Google API Client Library enables you to work with Google APIs such as Google+, Drive, or YouTube on your server
 * [Google Spreadsheet Client](https://github.com/asimlqt/php-google-spreadsheet-client) - This library provides a simple interface to the Google Spreadsheet API v3
+* [FPDF](http://www.fpdf.org/) - FPDF is a PHP class which allows to generate PDF files with pure PHP
 * [JQuery](https://jquery.com) - Most popular JavaScript library
 * [TableExport JQuery Plugin](https://github.com/kayalshri/tableExport.jquery.plugin) - This library exports html table data to downloadable file
 * [FileSaver.js](https://github.com/eligrey/FileSaver.js/) - This library for saving files on client machine
