@@ -287,7 +287,7 @@
 	#carousel_data_wrapper{
 		height:70vh;
 	}
-	.tweet_main>div{
+	.tweet_main>div, .retweet_indicator>div{
 		margin:0% 1.5%;
 	}
 	.tweet_main_div{
