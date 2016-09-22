@@ -645,7 +645,7 @@ function createTimelineHTML(obj, index){
 function createFollowerHTML(obj){
 	var s = '<div>'+
 				'<div class="follower_banner_div">'+
-					'<img src="'+obj.profile_banner+'"></img>'+
+					'<img src="'+(obj.profile_banner?obj.profile_banner:'/files/bg.png')+'"></img>'+
 				'</div>'+
 				'<div class="follower_body_div">'+
 					'<a href="#user_timeline">'+
