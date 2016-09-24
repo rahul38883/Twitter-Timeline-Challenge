@@ -10,7 +10,8 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 $consumer_key = 'MRH0aS7lMOYkgHgcGg1Myc1qR';
 $consumer_secret = 'Tphbq5XtCHZU3GDU4bFwvEz7OeF2xAEG6c0DdD7ewhUVhihQeV';
 
-$conn = mysqli_connect("107.170.91.176", "abcd", "abcd1234", "twittercheck");
+$db_info = json_decode(file_get_contents('files/db_config.json'));
+$conn = mysqli_connect($db_info->host, $db_info->username, $db_info->password, $db_info->db_name);
 if(!$conn){
 	die("Database connection failed");
 }

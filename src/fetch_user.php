@@ -11,7 +11,8 @@ if(verify_vars($_POST['value'])){
 	if(verify_vars($_SESSION['user'])){
 		$user = $_SESSION['user'];
 	
-		$conn = mysqli_connect("107.170.91.176", "abcd", "abcd1234", "twittercheck");
+		$db_info = json_decode(file_get_contents('../files/db_config.json'));
+		$conn = mysqli_connect($db_info->host, $db_info->username, $db_info->password, $db_info->db_name);
 		if(!$conn){
 			$response = error_data("database connection failed");
 		}else{

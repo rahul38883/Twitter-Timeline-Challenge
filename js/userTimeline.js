@@ -159,7 +159,13 @@ $(document).ready(function(){
 	$('#change_cache_duration').change(function(){
 		var value = $(this).val();
 		$.post('src/change_cache_duration.php', {cache_duration:value}, function(response){
-			//
+			if(response.status=='error'){
+				error_show(response.data);
+			}else if(response.status=='redirect'){
+				window.location.href = response.data.url;
+			}else{
+				//
+			}
 		});
 	});
 	
@@ -182,7 +188,7 @@ $(document).ready(function(){
 				var obj = [];
 				
 				if(response.data.length == 0){
-					error_show('no tweets found');
+					error_show('Sorry! no tweets found');
 					return;
 				}
 				

@@ -41,7 +41,7 @@ if($type==1){
 				$data = $user;
 			}else{
 				$status = "error";
-				$data = $user->error;
+				$data = "error fetching user data";
 			}
 		}else{
 			$status = "redirect";
@@ -61,7 +61,7 @@ if($type==1){
 				$data = $home_timeline;
 			}else{
 				$status = "error";
-				$data = $home_timeline->error;
+				$data = "error fetching home timeline";
 			}
 		}else if($type==3){
 			$followers = $connection->get("followers/list", ["count"=>10]);
@@ -70,7 +70,7 @@ if($type==1){
 				$data = $followers;
 			}else{
 				$status = "error";
-				$data = $followers->error;
+				$data = "error fetching followers list";
 			}
 		}else if($type==4){
 			if(verify_vars($_POST['screen_name'], $_POST['count'])){
@@ -82,7 +82,7 @@ if($type==1){
 					$data = $user_timeline;
 				}else{
 					$status = "error";
-					$data = $user_timeline->error;
+					$data = "error fetching user timeline";
 				}
 			}else{
 				$status = "redirect";

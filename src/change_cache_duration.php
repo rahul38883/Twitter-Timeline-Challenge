@@ -10,13 +10,14 @@ if(verify_vars($_SESSION['user'], $_POST['cache_duration'])){
 	$user = $_SESSION['user'];
 	$cache_duration = $_POST['cache_duration'];
 	if($arr[$cache_duration-1]){
-		$conn = mysqli_connect("107.170.91.176", "abcd", "abcd1234", "twittercheck");
+		$db_info = json_decode(file_get_contents('../files/db_config.json'));
+		$conn = mysqli_connect($db_info->host, $db_info->username, $db_info->password, $db_info->db_name);
 		if(!$conn){
 			$response = error_data("Database connection failed");
 		}
 		$query = "UPDATE users SET cache_duration=".$arr[$cache_duration-1]." WHERE username='".$user->screen_name."'";
 		if(!mysqli_query($conn, $query)){
-			$response = error_data(mysqli_error($conn));
+			$response = error_data("Database operation error");
 		}else{
 			$response = success_data("changed");
 		}

@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Twitter Timeline</title>
 		<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
 		<style type="text/css">
 			body{
