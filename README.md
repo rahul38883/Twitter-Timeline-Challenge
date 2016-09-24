@@ -10,8 +10,8 @@ Twitter timeline challenge assignment for rtCamp Solutions PVT LTD.
   - Download tweets following formats: csv, xls, pdf, xml and json
   - Download tweets to Google Spreadsheet and save it to Google Drive
 
-### What is Twitter
-According to Wikipedia
+### What is Twitter?
+According to Wikipedia,
 > Twitter is an online social networking service that enables users to send and read short 140-character messages called **"tweets"**. Registered users can read and post tweets, but those who are unregistered can only read them
  
 ### Before Installation
