@@ -20,11 +20,12 @@ According to Wikipedia
  
 ### Installtion
 
-Just install dependencies using [composer](https://getcomposer.org/)
+* Install dependencies using [composer](https://getcomposer.org/)
 ```
 $ composer install
 ```
-and push this code to your web server
+* Change files/db_config.json file for database connectivity
+* Push the code to your web server
 
 ### Live Demo
 [https://tweetrcheck11771177.herokuapp.com](https://tweetrcheck11771177.herokuapp.com/)
